@@ -20,21 +20,55 @@ var encuestaV = Backbone.View.extend({
 
         var encuestaNueva = new Encuesta({
             nombre: $('#nombre').val(),
+            ciudad: $('#ciudad').val(),
             estres: $('#estres').prop('checked'),
             nivel: $('#nivel').val(),
+            ingresos: $('#ingresos').val(),
             estrato: $('#estrato').val(),
             protocolos: $('#protocolos').prop('checked'),
             labora: $('#labora').prop('checked')
         })
         encuestasX.add(encuestaNueva);
         console.log(encuestasX.toJSON());
+        $("#formf").trigger("reset");
         $("#tablita").show();
         $("#formulario").hide();
+        this.agregarAtabla();
     },
     regresar: function (e) {
-        e.preventDefault();
+        //e.preventDefault();
+
+        $('#nombre').val("");
+        $('#ciudad').val("");
+        $('#estres').prop('checked', false);
+        $('#nivel').val("");
+        $('#ingresos').val("");
+        $('#estrato').val("");
+        $('#protocolos').prop('checked', false);
+        $('#labora').prop('checked', false);
+
         $("#formulario").show();
         $("#tablita").hide();
+    },
+    agregarAtabla: function () {
+        var tabla = $("#tablafinal");
+        tabla.find("tbody tr").remove();
+        var models = encuestasX.models;
+        var html = "<tbody>"
+        for (var i = 0; i < models.length; i++) {
+            console.log("dato: " + models[i].attributes.estrato);
+            html = html + "<tr><td>" + models[i].attributes.nombre + "</td>" +
+                "<td>" + models[i].attributes.ciudad + "</td>" +
+                "<td>" + models[i].attributes.estres + "</td>" +
+                "<td>" + models[i].attributes.nivel + "</td>" +
+                "<td>" + models[i].attributes.ingresos + "</td>" +
+                "<td>" + models[i].attributes.estrato + "</td>" +
+                "<td>" + models[i].attributes.protocolos + "</td>" +
+                "<td>" + models[i].attributes.labora + "</td>" +
+                "</tr>";
+        }
+        html = html + "</tbody>"
+        tabla.append(html);
     }
 });
 
