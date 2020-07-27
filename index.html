@@ -20,23 +20,52 @@
 </head>
 
 <body id="app">
-	<form>
-		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-				placeholder="Enter email">
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #3d7220!important;	">
+		<span style="color: white; flex: 1 1 auto; text-align: center;     font-weight: bold">Encuesta para impacto del
+			Coronavirus en la
+			sociedad</span>
 		</div>
-		<div class="form-group">
-			<label for="exampleInputPassword1">Password</label>
-			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-		</div>
-		<div class="form-check">
-			<input type="checkbox" class="form-check-input" id="exampleCheck1">
-			<label class="form-check-label" for="exampleCheck1">Check me out</label>
-		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+	</nav>
+	<div align="center">
+		<br>
+		<form style="text-align: center; width: 70%;">
+			<div class="form-group">
+				<input type="email" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="estres">
+				<label class="form-check-label" for="estres">¿Sufre estres por la cuarentena?</label>
+				<br>
+			</div>
+			<br>
+			<div class="form-group">
+				<input type="text" class="form-control" id="nivel" placeholder="Nivel de Educacion">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="ingresos"
+					placeholder="Ingreso promedio del núcleo familiar">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="estrato" placeholder="Estrato Social">
+			</div>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="protocolos">
+				<label class="form-check-label" for="protocolos">¿Sigue los protocolos de bioseguridad?</label>
+				<br>
+			</div>
+			<br>
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="labora">
+				<label class="form-check-label" for="labora">¿Labora actualmente?</label>
+				<br>
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+		</form>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 		crossorigin="anonymous"></script>

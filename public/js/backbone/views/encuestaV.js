@@ -1,7 +1,7 @@
 var encuestaV = Backbone.View.extend({
     el: '#app',
     initialize: function () {
-        app.encuestasX.fetch();
+        //app.encuestasX.fetch();
     }
 });
 
