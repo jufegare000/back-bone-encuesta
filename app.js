@@ -1,7 +1,7 @@
 var express = require('express'),
-	path 	= require('path'),
-	fs   	= require('fs'),
-	uuid   	= require('node-uuid');
+	path = require('path'),
+	fs = require('fs'),
+	uuid = require('node-uuid');
 
 var app = express(),
 	baseDeDatos = fs.readFileSync('./datos.json').toString();
@@ -16,26 +16,26 @@ app.use(express.cookieParser());
 app.use(express.methodOverride());
 
 // Pagina de Inicio: http:localhost:4000
-app.get('/', function (req,res){
+app.get('/', function (req, res) {
 	res.sendfile(__dirname + '/index.html');
 });
 
 // API REST
 
-// Mostrar todos los libros
-app.get('/libros', function(req,res) {
+// Mostrar todas las encuestas
+app.get('/encuestas', function (req, res) {
 	res.send(datos);
 });
 
-// Mostrar el detalle de un libro
-app.get('/libros/:id', function(req,res,next) {
+// Mostrar el detalle de una encuesta
+app.get('/encuestas/:id', function (req, res, next) {
 	var dato;
 
-	for ( var i=0; i<datos.length; i++ ) {
-		var libro = datos[i];
+	for (var i = 0; i < datos.length; i++) {
+		var encuesta = datos[i];
 
-		if (libro.id === req.params.id) {
-			dato = libro;
+		if (encuesta.id === req.params.id) {
+			dato = encuesta;
 		}
 	}
 
@@ -48,23 +48,23 @@ app.get('/libros/:id', function(req,res,next) {
 
 });
 
-// POST: crear un nuevo libro.
-app.post('/libros', function (req, res){
+// POST: crear una nuevo encuesta.
+app.post('/encuestas', function (req, res) {
 	req.body.id = uuid.v1(4);
 
 	datos.push(req.body);
 
-	res.send(200, {id: req.body.id});
+	res.send(200, { id: req.body.id });
 });
 
-// PUT: Actualizar un libro.
-app.put('/libros/:id', function (req, res){
-	var libro;
+// PUT: Actualizar una encuesta.
+app.put('/encuestas/:id', function (req, res) {
+	var encuesta;
 
 	for (var i = datos.length - 1; i >= 0; i--) {
-		libro = datos[i];
+		encuesta = datos[i];
 
-		if(libro.id === req.params.id){
+		if (encuesta.id === req.params.id) {
 			datos[i] = req.body;
 		}
 	}
@@ -72,15 +72,15 @@ app.put('/libros/:id', function (req, res){
 	res.send(200);
 });
 
-// DELETE: Eliminar un libro.
-app.delete('/libros/:id', function (req,res) {
+// DELETE: Eliminar una encuesta.
+app.delete('/encuestas/:id', function (req, res) {
 
 	var elementoEliminar;
 
-	for ( var i=0; i<datos.length; i++ ) {
-		var libro = datos[i];
+	for (var i = 0; i < datos.length; i++) {
+		var encuesta = datos[i];
 
-		if (libro.id === req.params.id) {
+		if (encuesta.id === req.params.id) {
 			elementoEliminar = i;
 		}
 	}
@@ -88,7 +88,7 @@ app.delete('/libros/:id', function (req,res) {
 	datos.splice(elementoEliminar, 1);
 
 	res.send(200);
-	
+
 });
 
 app.listen(4000);

@@ -1,26 +1,46 @@
 [
   {
     "id": "1",
-    "titulo": "Los perros hambrientos",
-    "autor": "Ciro Alegria",
-    "categoria": "Literatura"
+    "nombrePersona": "string",
+    "ciudad": "string",
+    "sufreEstres": "boolean",
+    "nivelEducacion": "string",
+    "ingresoPromedio": "number",
+    "estratoSocial": "number",
+    "sigueProtocolos": "boolean",
+    "labora": "boolean"
   },
   {
     "id": "2",
-    "titulo": "Developing Backbone.js Applications",
-    "autor": "Addy Osmani",
-    "categoria": "Tecnologia"
+    "nombrePersona": "string",
+    "ciudad": "string",
+    "sufreEstres": "boolean",
+    "nivelEducacion": "string",
+    "ingresoPromedio": "number",
+    "estratoSocial": "number",
+    "sigueProtocolos": "boolean",
+    "labora": "boolean"
   },
   {
     "id": "3",
-    "titulo": "La meta",
-    "autor": "Eliyahu Goldratt",
-    "categoria": "Negocios"
+    "nombrePersona": "string",
+    "ciudad": "string",
+    "sufreEstres": "boolean",
+    "nivelEducacion": "string",
+    "ingresoPromedio": "number",
+    "estratoSocial": "number",
+    "sigueProtocolos": "boolean",
+    "labora": "boolean"
   },
   {
     "id": "4",
-    "titulo": "Los heraldos negros",
-    "autor": "Cesar Vallejo",
-    "categoria": "Poesia"
+    "nombrePersona": "string",
+    "ciudad": "string",
+    "sufreEstres": "boolean",
+    "nivelEducacion": "string",
+    "ingresoPromedio": "number",
+    "estratoSocial": "number",
+    "sigueProtocolos": "boolean",
+    "labora": "boolean"
   }
 ]
