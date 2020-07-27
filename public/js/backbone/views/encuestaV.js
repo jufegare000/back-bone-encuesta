@@ -23,6 +23,7 @@ var encuestaV = Backbone.View.extend({
         })
         encuestasX.add(encuestaNueva);
         console.log(encuestasX.toJSON());
+        $("#tablita").css("visibility", "visible");
     }
 });
 

@@ -26,7 +26,7 @@
 			sociedad</span>
 		</div>
 	</nav>
-	<div align="center">
+	<div align="center" id="formulario">
 		<br>
 
 		<form style="text-align: center; width: 70%;">
@@ -85,36 +85,42 @@
 	<script src="js/backbone/models/encuesta.js"></script>
 	<script src="js/backbone/views/encuestaV.js"></script>
 	<script src="js/backbone/collections/listaEncuestas.js"></script>
-	<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-				<td>@twitter</td>
-			</tr>
-		</tbody>
-	</table>
+	<div align="center" id="tablita" style="visibility: hidden;">
+		<div class="regresar" id="botonRegresar">
+			<button id="regresar" class="regresar"
+				style="background-color: #3d7220; color: white; font-weight: bold;">Volver a realizar encuesta</button>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">First</th>
+					<th scope="col">Last</th>
+					<th scope="col">Handle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>@twitter</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 
 </html>
