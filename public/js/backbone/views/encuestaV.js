@@ -1,6 +1,11 @@
 var encuestaV = Backbone.View.extend({
+    initialize: function () {
+        console.log("inició");
+        $("#tablita").hide();
+    },
     events: {
-        'click .enviar': 'enviarForm'
+        'click .enviar': 'enviarForm',
+        'click .regresarB': 'regresar'
     },
     enviarForm: function (e) {
         e.preventDefault();
@@ -23,8 +28,27 @@ var encuestaV = Backbone.View.extend({
         })
         encuestasX.add(encuestaNueva);
         console.log(encuestasX.toJSON());
-        $("#tablita").css("visibility", "visible");
+        $("#tablita").show();
+        $("#formulario").hide();
+    },
+    regresar: function (e) {
+        e.preventDefault();
+        $("#formulario").show();
+        $("#tablita").hide();
+    }
+});
+
+var encuesta2 = Backbone.View.extend({
+    events: {
+        'click .regresarB': 'regresar'
+    },
+    regresar: function (e) {
+        e.preventDefault();
+        console.log("why?")
+        $("#formulario").show();
+        $("#tablita").hide();
     }
 });
 
 var vmm = new encuestaV({ el: $('#botonEnviar') });
+var vmm2 = new encuesta2({ el: $('#botonRegresar') });
