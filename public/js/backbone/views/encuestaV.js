@@ -38,15 +38,6 @@ var encuestaV = Backbone.View.extend({
     regresar: function (e) {
         //e.preventDefault();
 
-        $('#nombre').val("");
-        $('#ciudad').val("");
-        $('#estres').prop('checked', false);
-        $('#nivel').val("");
-        $('#ingresos').val("");
-        $('#estrato').val("");
-        $('#protocolos').prop('checked', false);
-        $('#labora').prop('checked', false);
-
         $("#formulario").show();
         $("#tablita").hide();
     },
