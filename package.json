@@ -6,7 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.6",
+    "express": "4.18.2",
     "jade": "*",
     "node-uuid": "~1.4.1"
   }
